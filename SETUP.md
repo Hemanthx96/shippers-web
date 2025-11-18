@@ -26,15 +26,15 @@ cd backend
 cp .env.example .env
 ```
 
-Edit `.env` file:
+Edit `.env` file (replace the placeholders with your actual values; keep the angle brackets out of the file you commit):
 
 ```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/moveeasy
-JWT_SECRET=your-super-secret-jwt-key-change-this
+MONGODB_URI=mongodb+srv://<db_user>:<db_password>@<cluster-host>/<database>?retryWrites=true&w=majority
+JWT_SECRET=<generate_a_strong_secret>
 PORT=5000
 NODE_ENV=development
-RAZORPAY_KEY_ID=your_razorpay_key_id
-RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+RAZORPAY_KEY_ID=<your_razorpay_key_id>
+RAZORPAY_KEY_SECRET=<your_razorpay_key_secret>
 FRONTEND_URL=http://localhost:3000
 ```
 

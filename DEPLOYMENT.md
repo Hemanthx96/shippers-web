@@ -31,9 +31,9 @@ This guide will help you deploy MoveEasy to free hosting services.
    - Copy the connection string
    - Replace `<password>` with your database password
 
-**Connection String Format:**
+**Connection String Format (replace placeholders before using):**
 ```
-mongodb+srv://username:password@cluster.mongodb.net/moveeasy?retryWrites=true&w=majority
+mongodb+srv://<db_user>:<db_password>@<cluster-host>/<database>?retryWrites=true&w=majority
 ```
 
 ---
@@ -67,12 +67,12 @@ mongodb+srv://username:password@cluster.mongodb.net/moveeasy?retryWrites=true&w=
    - **Environment**: `Node`
    - **Build Command**: `npm install`
    - **Start Command**: `npm start`
-6. Add Environment Variables:
+6. Add Environment Variables (replace placeholders with your secrets at deployment time):
    ```
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/moveeasy?retryWrites=true&w=majority
-   JWT_SECRET=your-random-secret-key-here
-   RAZORPAY_KEY_ID=your_razorpay_key_id
-   RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+   MONGODB_URI=mongodb+srv://<db_user>:<db_password>@<cluster-host>/<database>?retryWrites=true&w=majority
+   JWT_SECRET=<generate_a_strong_secret>
+   RAZORPAY_KEY_ID=<your_razorpay_key_id>
+   RAZORPAY_KEY_SECRET=<your_razorpay_key_secret>
    PORT=10000
    NODE_ENV=production
    FRONTEND_URL=https://your-frontend.vercel.app

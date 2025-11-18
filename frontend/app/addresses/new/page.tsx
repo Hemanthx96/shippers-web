@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { addressesAPI } from '@/lib/api';
 import { isAuthenticated } from '@/lib/auth';
 
-export default function NewAddressPage() {
+function AddressFormContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirectTo = searchParams.get('redirect') || '/addresses';
@@ -213,6 +213,22 @@ export default function NewAddressPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function NewAddressPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="section-padding text-center">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      }
+    >
+      <AddressFormContent />
+    </Suspense>
   );
 }
 
