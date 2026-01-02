@@ -1,0 +1,19 @@
+{
+  "name": "MoveEasy - Professional Shipping Services",
+  "short_name": "MoveEasy",
+  "description": "India's trusted logistics partner for shipping and moving services",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait-primary"
+}
+

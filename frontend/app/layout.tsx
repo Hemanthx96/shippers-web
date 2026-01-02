@@ -6,6 +6,17 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "MoveEasy - Professional Shipping Services",
   description: "India's trusted logistics partner for shipping and moving services",
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+  },
+  manifest: '/manifest.json',
+  themeColor: '#667eea',
 };
 
 export default function RootLayout({
@@ -16,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-bs-theme="light">
       <head>
+        <link rel="manifest" href="/manifest.json" />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
           rel="stylesheet"
